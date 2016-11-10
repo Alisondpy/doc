@@ -7,7 +7,7 @@ Front-End JSON(P) API Specification
 
 接口输出 (Response): JSON => {error, msg, data, ver}
 
-```js
+```javascript
 {
   "error": ${error_code},        // {String} api status code, defaults to '0',
   "msg": ${api_status_message},  // {String} api status message
@@ -28,7 +28,7 @@ Front-End JSON(P) API Specification
 
 示例:
 
-```json
+```javascripton
 {"error": "2", "msg": "user session timeout", "data": "http://login.yunhou.com/login.php?t", "ver": "1.0"}
 ```
 
@@ -48,7 +48,7 @@ Front-End JSON(P) API Specification
 >
 > 一些影响首屏页面绚染的接口尽量采用内联输出。 比如，获取服务端时间接口等 ...
 
-```js
+```javascript
 window['$PAGE_DATA'] = {
 
     // Client time for bpm.js

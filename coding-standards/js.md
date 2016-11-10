@@ -42,7 +42,7 @@ JS代码规范一（语法&格式篇）
   4. 多行字符串使用 + 拼接形式换行(打包工具会优化它, 用担心性能问题), 不要使用 \ 拼接(它不是 ECMA 的
      标准规范)。 例如, 下面的代码是错误的(在编译时, 不能忽略行起始位置的空白字符):
 
-     ```js
+     ```javascript
      var wrongString = 'The string is so long, \
                        we need split \
                        in multi-line.';
@@ -50,7 +50,7 @@ JS代码规范一（语法&格式篇）
 
      正解处理长串:
 
-     ```js
+     ```javascript
      var wrongString = '<div>' +
                           '<header>title text</header>' +
                           '<p>some description text</p>' +
@@ -118,7 +118,7 @@ JS代码规范一（语法&格式篇）
 
      \# 情况一: 语句会解释成, 一个函数带一匿名函数作为参数而被调用, 返回 42 后, 又一次被调用, 这就导致了错误
 
-     ```js
+     ```javascript
      MyClass.prototype.myMethod = function() {
          return 42;
      } // 缺分号
@@ -130,7 +130,7 @@ JS代码规范一（语法&格式篇）
 
      \# 情况二: 在运行时遇到 'no such property in undefined' 错误, 原因是代码试图这样 `x[ffVersion][isIE]()` 执行
 
-     ```js
+     ```javascript
      var x = {
          'i': 1,
          'j': 2
@@ -140,7 +140,7 @@ JS代码规范一（语法&格式篇）
 
      \# 情况三: 当 resultOfOperation() 返回非 0 时, 就会调用 die, 其结果也会赋给 arrResult
 
-     ```js
+     ```javascript
      var arrResult = ['1', '2', '3'] // 缺分号
 
      // conditional execution a la bash
@@ -160,7 +160,7 @@ JS代码规范一（语法&格式篇）
   3. return 语句在使用时也需慎重, 如果用表达式的执行作为返回值, 请把表达式和 return 放在同一行中, 以
      免换行符被误解析为语句的结束而引起返回错误。 例如:
 
-     ```js
+     ```javascript
      function unexpectedReturn() {
          var valueA = 1, valueB = 2;
          return
@@ -171,7 +171,7 @@ JS代码规范一（语法&格式篇）
 
 ### 代码格式示例
 
-  ```js
+  ```javascript
   function walk(holder, key) {
 
       // The walk method is used to recursively walk the resulting structure so
@@ -206,7 +206,7 @@ JS代码规范一（语法&格式篇）
   1. 所有 js, css 文件头部, 必须有文件注释, 用于简要说明:
      文件的主要功能(含模块信息)、作者(含作者邮箱)、版权等信息。 文件头注释格式如下:
 
-      ```js
+      ```javascript
       /**
        * Basic lang utilities functions ...
        *
@@ -252,7 +252,7 @@ JS代码规范一（语法&格式篇）
     每个类的定义都要附带一份注释, 描述类的功能和用法. 也需要说明构造器参数. 如果该类继承自其它类,
     应该使用 @extends 标记.  如果该类是对接口的实现, 应该使用 @implements 标记.
 
-      ```js
+      ```javascript
       /**
        * Class making something fun and easy.
        * @param {String} arg1 An argument that makes this more interesting.
@@ -270,7 +270,7 @@ JS代码规范一（语法&格式篇）
 
     提供参数的说明. 使用完整的句子, 并用第三人称来书写方法说明.
 
-      ```js
+      ```javascript
       /**
        * Converts text to some completely different text.
        * @param {String} arg1 An argument that makes this more interesting.
@@ -293,7 +293,7 @@ JS代码规范一（语法&格式篇）
 
     对于一些简单的, 不带参数的 getters, 说明可以忽略.
 
-      ```js
+      ```javascript
       /**
        * @return {Element} The element for the component.
        */
@@ -304,7 +304,7 @@ JS代码规范一（语法&格式篇）
 
   3. 属性注释
 
-      ```js
+      ```javascript
       /**
        * Maximum number of things per pane.
        * @type {Number}
@@ -317,13 +317,13 @@ JS代码规范一（语法&格式篇）
     有时, 类型检查不能很准确地推断出表达式的类型,
     所以应该给它添加类型标记注释来明确之, 并且必须在表达式和类型标签外面包裹括号.
 
-      ```js
+      ```javascript
       function setFoo(x) (/* @type {Number} */ x) { ... }
       ```
 
   5. 枚举
 
-      ```js
+      ```javascript
       /**
        * Enum for tri-state values.
        * @enum {Number}
@@ -337,7 +337,7 @@ JS代码规范一（语法&格式篇）
 
     注意一下, 枚举也具有有效类型, 所以可以当成参数类型来用.
 
-      ```js
+      ```javascript
       /**
        * Sets project state.
        * @param {project.TriState} state New project state.
@@ -352,7 +352,7 @@ JS代码规范一（语法&格式篇）
     如果你在 @param, @return, @supported, @this 或 @deprecated 中断行, 需要像在代码中一样,
     使用4个空格作为一个缩进层次.
 
-      ```js
+      ```javascript
       /**
        * Illustrates line wrapping for long param/return descriptions.
        * @param {String} foo This is a param with a description too long to fit in
@@ -367,7 +367,7 @@ JS代码规范一（语法&格式篇）
 
   7. 模块使用范例注释:
 
-      ```js
+      ```javascript
       /**
        * @example
        *  var bleeper = makeBleep(3);
@@ -379,7 +379,7 @@ JS代码规范一（语法&格式篇）
 
     有时类型会很复杂. 比如下面的函数, 接收 Element 参数
 
-      ```js
+      ```javascript
       /**
        * @param {String} tagName
        * @param {String|Element|Text|Array} contents
@@ -392,7 +392,7 @@ JS代码规范一（语法&格式篇）
 
     你可以使用 @typedef 标记来定义个常用的类型表达式
 
-      ```js
+      ```javascript
       /** @typedef {String|Element|Text|Array} */
       goog.ElementContent;
 
@@ -451,7 +451,7 @@ JS代码规范一（语法&格式篇）
 
   12. (建议) `this` 命名, 尽量以能表达当前实例意义的名称, 通用命名为 `self`;
 
-    ```js
+    ```javascript
     Pager.protoype.goto = function() {
         var pager = this, index = page.currentIndex + 1;
         setTimeout(function() { page.doRequest(index); });
@@ -501,7 +501,7 @@ JS代码规范一（语法&格式篇）
 
   4. 不要使用连等进行赋值。例如:
 
-    ```js
+    ```javascript
     (function () {
         var numberA = numberB = 3; // 这里产生的 numberB 是全局变量
     })();
@@ -517,7 +517,7 @@ JS代码规范一（语法&格式篇）
 
   8. (建议) 字符串变量赋值的时候, 优先使用单引号, 而不是双引号, 尤其是你创建的是 HTML 字符串。
 
-    ```js
+    ```javascript
     var s = 'hello world';
     var html = '<div class="header"></div>';
     console.log(s + ', my name is cat');
@@ -530,7 +530,7 @@ JS代码规范一（语法&格式篇）
 
   1. if 语句, 即使只有单行, 也要用花括号括起来, 例如:
 
-    ```js
+    ```javascript
     // (错误)
     if (condition) statement;
 
@@ -542,7 +542,7 @@ JS代码规范一（语法&格式篇）
 
   2. 使用三元运算符, 替代单一的 if else 语句。例如:
 
-    ```js
+    ```javascript
     if (val != 0) {
          return foo();
     } else {
@@ -557,7 +557,7 @@ JS代码规范一（语法&格式篇）
 
   4. (建议) 利用 && 和 || 短路来简化代码:
 
-    ```js
+    ```javascript
     function foo(opt_win) {
         var win;
         if (opt_win) {
@@ -577,7 +577,7 @@ JS代码规范一（语法&格式篇）
 
     && 短路:
 
-    ```js
+    ```javascript
     if (node) {
         if (node.kids) {
             if (node.kids[index]) {
@@ -608,7 +608,7 @@ JS代码规范一（语法&格式篇）
 
   3. 避免在 if 和 while 语句的条件部分进行赋值。例如:
 
-    ```js
+    ```javascript
     // (错误)
     var i = 10;
     while (i = i - 2) {
@@ -635,7 +635,7 @@ JS代码规范一（语法&格式篇）
     13 和 14 条)。各个浏览器糟糕的实现相互不兼容, 有些也与未来 ECMAScript 草案相违背。ECMAScript 只允
     许在脚本的根语句或函数中声明函数. 如果确实需要在块中定义函数, 建议使用函数表达式来初始化变量。例如:
 
-    ```js
+    ```javascript
     // (错误)
     if (x){
         function foo () {}
@@ -648,7 +648,7 @@ JS代码规范一（语法&格式篇）
 
   4. 有很多方法可以给构造器添加方法或成员, 我们更倾向于使用如下的形式:
 
-    ```js
+    ```javascript
     Foo.prototype.bar = function() {
         /* ... */
     };
@@ -671,7 +671,7 @@ JS代码规范一（语法&格式篇）
 
   1. 由于闭包保留了一个指向它封闭作用于的指针, 所以在给 DOM 元素附加闭包时候, 要避免产生循环引用, 从而导致内存泄露。例如:
 
-    ```js
+    ```javascript
     // (错误)
     function foo(element, a, b) {
         element.onclick = function () { /* 使用变量 a 和 b */ }
@@ -681,7 +681,7 @@ JS代码规范一（语法&格式篇）
     这里, 即使没有使用 element, 闭包也保留了 element, a 和 b 的引用, 由于 element
     也保留了对闭包的引用, 这就产生了循环引用, 这就不能被 GC 回收. 这种情况下, 可将代码重构为:
 
-    ```js
+    ```javascript
     function foo(element, a, b) {
         element.onclick = handle(a, b);
     }
@@ -692,7 +692,7 @@ JS代码规范一（语法&格式篇）
 
   2. 通常我们需要给模块提供 destroy 接口方法，在这个方法做好模块的善后工作，防止内存开销过大, 如。
 
-    ```js
+    ```javascript
     /**
      * var loader = ImageLoader(...);
      * loader.load();
@@ -731,13 +731,13 @@ JS代码规范一（语法&格式篇）
 
   5. 尽量使用严格模式
 
-    ```js
+    ```javascript
     'use strict';
     ```
 
   6. 模块代码AMD方式组织。define(), 模块依赖用 commonjs require()
 
-    ```js
+    ```javascript
     define(function(require, exports, module) {
         'use strict';
 

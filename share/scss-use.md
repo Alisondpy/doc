@@ -41,13 +41,13 @@ SCSS 初级使用
 
 1. 创建测试项目 'myproject'
 
-  ```js
+  ```javascript
   compass create myproject --sass-dir "sass" --css-dir "css" --javascripts-dir "js" --images-dir "images"
   ```
 
 1. 进入到 'myproject' 目录, 并打开 config.rb 文件。列出了常用的配置参数:
 
-  ```js
+  ```javascript
   http_path = "/"
   css_dir = "css" #生成的css目录
   sass_dir = "sass" #需要编译的scss目录
@@ -62,7 +62,7 @@ SCSS 初级使用
 
   【ps:记得在当前窗口运行命令，否则会找不到 config.rb 配置文件】 
 
-  ```js
+  ```javascript
   compass watch
   ``` 
 
