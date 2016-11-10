@@ -13,10 +13,10 @@
 + [CSS规范](./coding-standards/css.md)
 + [JS规范一（语法&格式篇）](./coding-standards/js.md)
 + [JS规范二（base）](./coding-standards/js-base.md)
-+ [浏览器兼容标准](./coding-standards/browser.md)
 
 ##开发流程
 
++ [浏览器兼容标准](./coding-standards/browser.md)
 + [前端开发引导](./developing-standards/guideline.md)
 + [工作周报模板](./developing-standards/weekly-report-template.md) 
 + 前端开发流程与规范（待定）
