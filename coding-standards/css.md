@@ -254,35 +254,35 @@
 
   html:
 
-  ```html
-  <div id="mod-xxx" class="mod-xxx">
-    <div class="hd">Module Title</div>
-    <div class="bd">
-       Module body inner html constructs
+    ```html
+    <div id="mod-xxx" class="mod-xxx">
+      <div class="hd">Module Title</div>
+      <div class="bd">
+         Module body inner html constructs
+      </div>
+      <div class="ft">just a footer</div>
     </div>
-    <div class="ft">just a footer</div>
-  </div>
-  ```
+    ```
 
   scss
 
-  ```css
-  .mod-xxx {
-    border: 1px solid #ccc;
-    .hd { font-weight: bold; }
-    .bd { paddinig: 3px; }
-    .ft { margin-botto: 3px; }
-  }
-  ```
+    ```css
+    .mod-xxx {
+      border: 1px solid #ccc;
+      .hd { font-weight: bold; }
+      .bd { paddinig: 3px; }
+      .ft { margin-botto: 3px; }
+    }
+    ```
 
   css:
 
-  ```css
-  .mod-xxx { border: 1px solid #ccc; }
-  .mod-xxx .hd { font-weight: bold; }
-  .mod-xxx .bd { paddinig: 3px; }
-  .mod-xxx .ft { margin-botto: 3px; }
-  ```
+    ```css
+    .mod-xxx { border: 1px solid #ccc; }
+    .mod-xxx .hd { font-weight: bold; }
+    .mod-xxx .bd { paddinig: 3px; }
+    .mod-xxx .ft { margin-botto: 3px; }
+    ```
 
 ## 其他
 
