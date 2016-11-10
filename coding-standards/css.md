@@ -99,23 +99,23 @@
 
   5. 全局皮肤样式
 
-文字颜色(命名空间text-xxx)
+    文字颜色(命名空间text-xxx)
 
-```
-text-c1, text-c2,text-c3……
-```
+    ```
+    text-c1, text-c2,text-c3……
+    ```
 
-背景颜色(命名空间bg -xxx)
+    背景颜色(命名空间bg -xxx)
 
-```
-bg-c1,bg-c2,bg-c3……
-```
+    ```
+    bg-c1,bg-c2,bg-c3……
+    ```
 
-边框颜色(命名空间border-xxx)
+    边框颜色(命名空间border-xxx)
 
-```
-border-c1,border-c2,border-c3……
-```
+    ```
+    border-c1,border-c2,border-c3……
+    ```
 
 ## 属性使用
 
