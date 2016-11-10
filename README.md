@@ -16,10 +16,10 @@
 
 ##开发流程
 
-+ [前端开发引导](./guideline.md)
++ [前端开发引导](./developing-standards/guideline.md)
 + [工作周报模板](./developing-standards/weekly-report-template.md) 
-+ [前端开发流程与规范（待定）](./)
-+ [前端项目规范（待定）](./)
++ 前端开发流程与规范（待定）]
++ 前端项目规范（待定）]
 
 ##前后端接口规范
 + [JSON-API](./coding-standards/json-api.md)
