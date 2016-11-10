@@ -22,7 +22,7 @@
 + 前端项目规范（待定）
 
 ##前后端接口规范
-+ [JSON-API](./coding-standards/json-api.md)
++ [JSON-API](./json/json-api.md)
 
 ##知识分享
 + [通用表单项验证规则](./share/validation.md) 
